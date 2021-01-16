@@ -12,4 +12,8 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T hw1-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uneige-mvk:$BINTRAY_API_KEY "https://api.bintray.com/content/neige-mvk/otus-cpp/helloworld/$TRAVIS_BUILD_NUMBER/helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T ip_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uneige-mvk:$BINTRAY_API_KEY "https://api.bintray.com/content/neige-mvk/otus-cpp/otus-ip-filter/$TRAVIS_BUILD_NUMBER/ip_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  on:
+      branches:
+        only:
+        - main
